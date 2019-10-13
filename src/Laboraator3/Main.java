@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         String delimiters = "?!.";
-        String data = readFileAsString("C:\\Users\\super\\Desktop\\1.txt");
+        String data = readFileAsString("C:\\Users\\super\\IdeaProjects\\OOP\\1.txt");
         TextManipulation textManipulation = new TextManipulation( data);
 
             textManipulation.displayTop5Often();
