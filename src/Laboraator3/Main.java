@@ -29,20 +29,20 @@ public class Main {
     }
     public static String[] formattingWords(String data, String delimiters) {
 
-        String[] hzCum = data.split("\\s+");
-        StringBuilder[] sb = new StringBuilder[hzCum.length];
-        for (int i = 0; i < hzCum.length; i++) {
-            for (int m = 0; m < hzCum[i].length(); m++) {
-                if (delimiters.indexOf(hzCum[i].charAt(m)) != -1) {
-                    sb[i] = new StringBuilder(hzCum[i]);
+        String[] arrayOfWords = data.split("\\s+");
+        StringBuilder[] sb = new StringBuilder[arrayOfWords.length];
+        for (int i = 0; i < arrayOfWords.length; i++) {
+            for (int m = 0; m < arrayOfWords[i].length(); m++) {
+                if (delimiters.indexOf(arrayOfWords[i].charAt(m)) != -1) {
+                    sb[i] = new StringBuilder(arrayOfWords[i]);
                     sb[i] = sb[i].deleteCharAt(sb[i].length() - 1);
                 } else
-                    sb[i] = new StringBuilder(hzCum[i]);
+                    sb[i] = new StringBuilder(arrayOfWords[i]);
             }
         }
-        for (int i = 0; i < hzCum.length; i++) {
-            hzCum[i] = String.valueOf(sb[i]);
+        for (int i = 0; i < arrayOfWords.length; i++) {
+            arrayOfWords[i] = String.valueOf(sb[i]);
         }
-        return hzCum;
+        return arrayOfWords;
     }
 }
