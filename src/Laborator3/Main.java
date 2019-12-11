@@ -1,4 +1,4 @@
-package Laboraator3;
+package Laborator3;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
